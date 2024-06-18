@@ -1,4 +1,3 @@
-import { FiMenu } from 'react-icons/fi';
 import Image from 'next/image';
 import React from 'react';
 
@@ -14,7 +13,7 @@ export const Header = () => {
         </button>
       </div>
       <div className="lg:hidden">
-        <FiMenu className="text-3xl text-secondary-300" />
+        <Image src="/menu-icon.png" alt="Menu Icon" width={24} height={24} />
       </div>
     </div>
   );
