@@ -8,9 +8,7 @@ export const Hero = () => {
       <Image
         src="/hero.jpg"
         alt="Hero background"
-        sizes="100vw"
-        width={1432}
-        height={651}
+        layout="fill"
         objectFit="cover"
         className="absolute inset-0 z-[-1]"
       />

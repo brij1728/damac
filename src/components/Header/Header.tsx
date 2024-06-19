@@ -4,7 +4,7 @@ import React from 'react';
 
 export const Header = () => {
   return (
-    <div className="flex items-center justify-between py-8 pl-4 pr-6">
+    <div className="relative z-10 flex items-center justify-between py-8 pl-4 pr-6">
       <div>
         <Image src="/menu.png" alt="Damac" width={150} height={150} />
       </div>
