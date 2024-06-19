@@ -1,9 +1,26 @@
 import './globals.css';
 
-import { Inter } from 'next/font/google';
-import type { Metadata } from 'next';
+import { Inter, Oswald, Poppins } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+import { Metadata } from 'next';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+const oswald = Oswald({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-oswald',
+});
+const poppins = Poppins({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
 
 export const metadata: Metadata = {
   title: 'DAMAC Properties - Luxury Real Estate Company in Dubai',
@@ -13,12 +30,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${inter.variable} ${oswald.variable} ${poppins.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }

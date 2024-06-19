@@ -9,15 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+        sans: ['var(--font-inter)', 'sans-serif'],
+        oswald: ['var(--font-oswald)', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
       },
       colors: {
         primary: {
           100: '#17ABFF',
           200: '#00357B',
           300: '#004572',
+          400: '#5790BE',
         },
-
         secondary: {
           100: '#E7EBEF',
           200: '#F5F5F5',
@@ -28,4 +30,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

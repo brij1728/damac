@@ -1,5 +1,6 @@
 import { Header } from '../Header';
 import Image from 'next/image';
+import { PriceCard } from '../ui';
 import React from 'react';
 
 export const Hero = () => {
@@ -8,11 +9,17 @@ export const Hero = () => {
       <Image
         src="/hero.jpg"
         alt="Hero background"
-        layout="fill"
+        fill
         objectFit="cover"
         className="absolute inset-0 z-[-1]"
       />
       <Header />
+      <div className="flex sm:flex-row">
+        <div></div>
+        <div>
+          <PriceCard />
+        </div>
+      </div>
     </div>
   );
 };
