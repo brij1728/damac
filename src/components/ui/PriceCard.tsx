@@ -2,7 +2,7 @@ import React from 'react';
 
 export const PriceCard = () => {
   return (
-    <div className="flex flex-col items-start justify-start gap-8 rounded-[14px] bg-primary-400/10 px-8 pt-8 backdrop-blur">
+    <div className="flex flex-col items-start justify-start gap-8 rounded-[14px] bg-primary-400/10 px-8 pb-6 pt-8 backdrop-blur">
       <div className="gap-3 text-secondary-300">
         <p className="font-poppins text-[13px] font-normal uppercase">
           Pricing starting from
