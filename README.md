@@ -18,11 +18,11 @@ The source code for this project is available on GitHub: [https://github.com/bri
 
 This project was implemented using the following technologies:
 
-- **Next.js**: A React framework for server-side rendering and generating static websites.
-- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **React Icons**: A library for including popular icons in your React projects.
-- **Swiper**: A modern touch slider and carousel library.
-- **Next/Image**: An optimized image component for Next.js.
+- [**Next.js**](https://nextjs.org/): A React framework for server-side rendering and generating static websites.
+- [**Tailwind CSS**](https://tailwindcss.com/): A utility-first CSS framework for rapid UI development.
+- [**React Icons**](https://react-icons.github.io/react-icons/): A library for including popular icons in your React projects.
+- [**Swiper**](https://swiperjs.com/): A modern touch slider and carousel library.
+- [**Next/Image**](https://nextjs.org/docs/basic-features/image-optimization): An optimized image component for Next.js.
 
 ## Getting Started
 
