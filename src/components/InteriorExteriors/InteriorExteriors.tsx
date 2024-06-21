@@ -1,12 +1,28 @@
 'use client';
 
+'use client';
+
+import 'swiper/swiper-bundle.css';
+
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Button } from '../ui';
 import Image from 'next/image';
 
 export const InteriorExteriors = () => {
   const [showInteriors, setShowInteriors] = useState(false);
+
+  const settings = {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    breakpoints: {
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+    },
+  };
 
   return (
     <div className="flex flex-col justify-center items-center p-4 w-full mx-auto lg:w-10/12">
@@ -42,39 +58,49 @@ export const InteriorExteriors = () => {
             />
           </div>
         ) : (
-          <div className="flex justify-center gap-1 sm:gap-4">
-            <Image
-              src="/interiors1.jpg"
-              alt="Interior1"
-              width={265}
-              height={170}
-              className="object-cover"
-              layout="responsive"
-            />
-            <Image
-              src="/interiors2.jpg"
-              alt="Interior2"
-              width={265}
-              height={170}
-              className="object-cover"
-              layout="responsive"
-            />
-            <Image
-              src="/interiors3.jpg"
-              alt="Interior3"
-              width={265}
-              height={170}
-              className="object-cover"
-              layout="responsive"
-            />
-            <Image
-              src="/interiors4.jpg"
-              alt="Interior4"
-              width={265}
-              height={170}
-              className="object-cover"
-              layout="responsive"
-            />
+          <div className="w-full">
+            <Swiper {...settings}>
+              <SwiperSlide>
+                <Image
+                  src="/interiors1.jpg"
+                  alt="Interior1"
+                  width={265}
+                  height={170}
+                  className="object-cover"
+                  layout="responsive"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/interiors2.jpg"
+                  alt="Interior2"
+                  width={265}
+                  height={170}
+                  className="object-cover"
+                  layout="responsive"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/interiors3.jpg"
+                  alt="Interior3"
+                  width={265}
+                  height={170}
+                  className="object-cover"
+                  layout="responsive"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/interiors4.jpg"
+                  alt="Interior4"
+                  width={265}
+                  height={170}
+                  className="object-cover"
+                  layout="responsive"
+                />
+              </SwiperSlide>
+            </Swiper>
           </div>
         )}
       </div>
