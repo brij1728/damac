@@ -6,8 +6,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ![Project Screenshot](./public/project.png)
 
-_(Replace `./public/project.png` with the path to your actual project screenshot)_
-
 ## Live Project
 
 Check out the live project [here](https://damac-nine.vercel.app/).
