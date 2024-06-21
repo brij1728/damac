@@ -1,19 +1,16 @@
 'use client';
 
-import 'swiper/swiper-bundle.css';
-import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import './styles.css';
 
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
 
 import { Button } from '../ui';
 import Image from 'next/image';
-
-// Install Swiper modules
-SwiperCore.use([Navigation]);
+import { Navigation } from 'swiper/modules';
 
 export const InteriorExteriors = () => {
   const [showInteriors, setShowInteriors] = useState(false);
@@ -69,7 +66,7 @@ export const InteriorExteriors = () => {
           </div>
         ) : (
           <div className="relative w-full">
-            <Swiper {...settings}>
+            <Swiper {...settings} modules={[Navigation]} className="mySwiper">
               <SwiperSlide>
                 <Image
                   src="/interiors1.jpg"
