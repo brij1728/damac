@@ -5,7 +5,7 @@ import { Slider } from '../ui';
 export const SlideList = () => {
   return (
     <>
-      <div className="flex items-center justify-center gap-10 bg-secondary-400 sm:gap-20">
+      <div className="bg-secondary-400 flex items-center justify-center gap-10 sm:gap-20">
         {Items.map((item, index) => (
           <div key={index}>
             <Slider

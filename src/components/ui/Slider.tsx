@@ -10,7 +10,7 @@ interface SliderProps {
 export const Slider: React.FC<SliderProps> = ({ image, title, heading }) => {
   return (
     <div>
-      <div className="flex flex-col items-center justify-center gap-1 bg-secondary-400 p-8">
+      <div className="bg-secondary-400 flex flex-col items-center justify-center gap-1 p-8">
         <Image src={image} alt={title} width={50} height={50} />
         <p className="whitespace-nowrap font-poppins text-xs font-normal uppercase text-primary-200 sm:text-base">
           {title}
