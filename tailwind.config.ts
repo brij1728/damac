@@ -26,11 +26,13 @@ const config: Config = {
           200: '#F5F5F5',
           300: '#FCFCFC',
           400: '#F4F9FF',
+          500: '#343434',
+          600: '#686868',
         },
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };
 
 export default config;

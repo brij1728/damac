@@ -20,3 +20,22 @@ export const Items = [
     heading: '700 Sqmt',
   },
 ];
+
+export const Amenities = [
+  {
+    image: '/pools.png',
+    title: ['Floating', 'Pools'],
+  },
+  {
+    image: '/cabin.jpg',
+    title: ['Spacious Cabins', 'Like Rooms'],
+  },
+  {
+    image: '/seafacing.jpg',
+    title: ['Sea Facing', 'Swimming Pools'],
+  },
+  {
+    image: '/gym.jpg',
+    title: ['Gymnasium', '& Fitness'],
+  },
+];
