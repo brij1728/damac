@@ -111,15 +111,15 @@ export const InteriorExteriors = () => {
             <IconContext.Provider
               value={{ style: { verticalAlign: 'middle' } }}
             >
-              <div className="swiper-button-prev absolute top-1/2 left-4 transform -translate-y-1/2 z-10 flex items-center justify-center w-6 h-6 bg-primary-500 text-white rounded-full shadow-lg cursor-pointer hover:bg-primary-700 transition duration-300">
+              <div className="swiper-button-prev z-10 flex items-center justify-center bg-secondary-300  rounded-full shadow-lg cursor-pointer hover:bg-primary-700 transition duration-300 p-8">
                 <FaArrowLeft
-                  className="text-white"
+                  className=""
                   style={{ width: '3.5px', height: '6px' }}
                 />
               </div>
-              <div className="swiper-button-next absolute top-1/2 right-4 transform -translate-y-1/2 z-10 flex items-center justify-center w-6 h-6 bg-primary-500 text-white rounded-full shadow-lg cursor-pointer hover:bg-primary-700 transition duration-300">
+              <div className="swiper-button-next  z-10 flex items-center justify-center bg-secondary-300 rounded-full shadow-lg cursor-pointer hover:bg-primary-700 transition duration-300 p-8">
                 <FaArrowRight
-                  className="text-white"
+                  className=""
                   style={{ width: '3.5px', height: '6px' }}
                 />
               </div>
