@@ -2,8 +2,9 @@
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import '../../app/globals.css';
 
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -22,8 +23,7 @@ export const InteriorExteriors = () => {
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Call once on mount
-
+    handleResize();
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -126,17 +126,11 @@ export const InteriorExteriors = () => {
               <IconContext.Provider
                 value={{ style: { verticalAlign: 'middle' } }}
               >
-                <div className="swiper-button-prev z-10 flex items-center justify-center bg-secondary-300 rounded-full shadow-lg cursor-pointer hover:bg-primary-700 transition duration-300 p-8">
-                  <FaArrowLeft
-                    className=""
-                    style={{ width: '3.5px', height: '6px' }}
-                  />
+                <div className="swiper-button-prev z-10 flex items-center justify-center">
+                  <FaChevronLeft />
                 </div>
-                <div className="swiper-button-next z-10 flex items-center justify-center bg-secondary-300 rounded-full shadow-lg cursor-pointer hover:bg-primary-700 transition duration-300 p-8">
-                  <FaArrowRight
-                    className=""
-                    style={{ width: '3.5px', height: '6px' }}
-                  />
+                <div className="swiper-button-next z-10 flex items-center justify-center">
+                  <FaChevronRight />
                 </div>
               </IconContext.Provider>
             )}
