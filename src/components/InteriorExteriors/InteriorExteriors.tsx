@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Button } from '../ui';
@@ -14,6 +14,20 @@ import { Navigation } from 'swiper/modules';
 
 export const InteriorExteriors = () => {
   const [showInteriors, setShowInteriors] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Call once on mount
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const settings = {
     spaceBetween: 10,
@@ -108,22 +122,24 @@ export const InteriorExteriors = () => {
                 />
               </SwiperSlide>
             </Swiper>
-            <IconContext.Provider
-              value={{ style: { verticalAlign: 'middle' } }}
-            >
-              <div className="swiper-button-prev z-10 flex items-center justify-center bg-secondary-300  rounded-full shadow-lg cursor-pointer hover:bg-primary-700 transition duration-300 p-8">
-                <FaArrowLeft
-                  className=""
-                  style={{ width: '3.5px', height: '6px' }}
-                />
-              </div>
-              <div className="swiper-button-next  z-10 flex items-center justify-center bg-secondary-300 rounded-full shadow-lg cursor-pointer hover:bg-primary-700 transition duration-300 p-8">
-                <FaArrowRight
-                  className=""
-                  style={{ width: '3.5px', height: '6px' }}
-                />
-              </div>
-            </IconContext.Provider>
+            {isMobile && (
+              <IconContext.Provider
+                value={{ style: { verticalAlign: 'middle' } }}
+              >
+                <div className="swiper-button-prev z-10 flex items-center justify-center bg-secondary-300 rounded-full shadow-lg cursor-pointer hover:bg-primary-700 transition duration-300 p-8">
+                  <FaArrowLeft
+                    className=""
+                    style={{ width: '3.5px', height: '6px' }}
+                  />
+                </div>
+                <div className="swiper-button-next z-10 flex items-center justify-center bg-secondary-300 rounded-full shadow-lg cursor-pointer hover:bg-primary-700 transition duration-300 p-8">
+                  <FaArrowRight
+                    className=""
+                    style={{ width: '3.5px', height: '6px' }}
+                  />
+                </div>
+              </IconContext.Provider>
+            )}
           </div>
         )}
       </div>
